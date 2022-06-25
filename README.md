@@ -1,5 +1,6 @@
 # jsonmsgprodcon
 
+
 Kafka Setup :
 
 Download kafka confluent community version by using below link.
@@ -28,4 +29,5 @@ bin\windows\kafka-console-producer.bat --topic firsttopic --broker-list localhos
 
 Read the messages from beginning via console consumer :
 bin\windows\kafka-console-consumer.bat --topic firsttopic --bootstrap-server localhost:9092 --from-beginning
+
 
