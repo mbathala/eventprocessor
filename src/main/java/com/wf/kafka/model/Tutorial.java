@@ -1,11 +1,14 @@
 package com.wf.kafka.model;
 
+import org.springframework.data.annotation.Id;
+
 public class Tutorial {
 
     String topicName;
     String publisher;
     String location;
     String type;
+    @Id
     String topicId;
 
     public String getTopicName() {

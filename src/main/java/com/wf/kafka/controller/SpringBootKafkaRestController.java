@@ -21,9 +21,17 @@ public class SpringBootKafkaRestController {
         springBootKafkaProducer.sendMessage(message);
     }
 
-    @PostMapping(value = "/receivedmsg")
+    @PostMapping(value = "/sendJson")
     public void send(@RequestBody Tutorial tutorial) {
+    	long lStartTime = System.currentTimeMillis();
     	
+    	springBootKafkaProducer.sendMessage(tutorial);
+    	
+    	long lEndTime = System.currentTimeMillis();
+
+        long output = lEndTime - lStartTime;
+
+        System.out.println("Message processing time in milliseconds :: " + output);
     }
 
 }

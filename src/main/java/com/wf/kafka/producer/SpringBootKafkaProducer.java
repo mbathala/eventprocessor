@@ -21,7 +21,7 @@ public class SpringBootKafkaProducer {
     public void sendMessage(String value) {
     	Tutorial tutorial = new Tutorial();
     	tutorial.setLocation(value);
-        ListenableFuture<SendResult<String,Tutorial>> future = tutorialKafkaTemplate.send("firsttopic", tutorial);
+        ListenableFuture<SendResult<String,Tutorial>> future = tutorialKafkaTemplate.send("test-topic", tutorial);
         future.addCallback(new ListenableFutureCallback() {
             @Override
             public void onFailure(Throwable ex) {
@@ -36,7 +36,7 @@ public class SpringBootKafkaProducer {
     }
 
     public void sendMessage(Tutorial value) {
-        ListenableFuture<SendResult<String,Tutorial>> future = tutorialKafkaTemplate.send("spring_boot_kafka_topic_v1", value);
+        ListenableFuture<SendResult<String,Tutorial>> future = tutorialKafkaTemplate.send("test-topic", value);
         future.addCallback(new ListenableFutureCallback() {
             @Override
             public void onFailure(Throwable ex) {
