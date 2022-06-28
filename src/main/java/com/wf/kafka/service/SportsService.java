@@ -16,7 +16,12 @@ public class SportsService {
 		System.out.println("*** In saveData method >>>> ");
 		try {
 			sportsRepo.save(tutorial);
-			System.out.println("Saved tutorial successfully....");
+			System.out.println("Saved Tutorial Successfully....");
+			if("Hyderabad".equalsIgnoreCase(tutorial.getLocation())) {
+				tutorial.setLocation("Telangana - "+tutorial.getLocation());
+	        	sportsRepo.save(tutorial);
+	        	System.out.println("Updated Tutorial Successfully....");
+	        }
 		}
 		catch(Exception exc) {
 			System.out.println("Exception occured while saving the data ::: "+exc);

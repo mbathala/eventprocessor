@@ -7,7 +7,7 @@ public class Tutorial {
     String topicName;
     String publisher;
     String location;
-    String type;
+    String opType;
     @Id
     String topicId;
 
@@ -35,12 +35,12 @@ public class Tutorial {
         this.location = location;
     }
 
-    public String getType() {
-        return type;
+    public String getOpType() {
+        return opType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setOpType(String opType) {
+        this.opType = opType;
     }
 
     public String getTopicId() {
@@ -57,7 +57,7 @@ public class Tutorial {
                 "topicName='" + topicName + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", location='" + location + '\'' +
-                ", type='" + type + '\'' +
+                ", opType='" + opType + '\'' +
                 ", topicId='" + topicId + '\'' +
                 '}';
     }
